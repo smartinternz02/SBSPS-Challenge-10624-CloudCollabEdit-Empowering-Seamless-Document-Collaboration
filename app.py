@@ -211,6 +211,7 @@ def newproject():
         pdesc = request.form['pdesc']
         if pname not in pnames:
             print(pname,pnames)
+            pnames.append(pname)
             sql = f"insert into project_data (project_name,project_desc,project_user,project_last_modified) values ('{pname}','{pdesc}','{session['uname']}','{today_date}');"
             ibm_db.exec_immediate(conn, sql)
             return render_template('project.html')
@@ -267,11 +268,6 @@ def save(pid):
 
     cos.upload_file(file_path, bucket_name, object_name)
     createDocument(curr_dname,session['uname'],pid)
-    os.remove(file_path)
-    return redirect(url_for('upsuccess'))
-
-@app.route('/upsuccess')
-def upsuccess():
     return render_template('uploadsuccess.html')
 
 @app.route('/download')
@@ -279,11 +275,6 @@ def download():
     object_name = session['fname']+'_'+curr_dname
     file_path = os.path.join(curr_dir,object_name)
     return send_file(file_path, as_attachment=True)
-
-@app.route('/junk')
-def junk():
-    return render_template('uploadsuccess.html')
-
 
 
 

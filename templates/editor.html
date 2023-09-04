@@ -12,11 +12,12 @@
             <h3>{{ doc_name }}</h3>
         </div>
         <div class="msg">
-            <h3>{{ message }}</h3>
+            <h3 id="msg-btn" style="color: green; display: none;">Document Upload Successfully.</h3>
         </div>
         <div class="op-right">
             <p>Last Modified on: {{ last_modified }}</p>
             <button id="save-btn">Save Document</button>
+            <a href="#" id="download-btn">Download</a>
         </div>
     </div>
     <div class="editor-ui">
@@ -30,12 +31,14 @@
 
         var saveBtn = document.getElementById('save-btn');
         saveBtn.addEventListener('click', function() {
+            document.getElementById('download-btn').href = "/download";
+            document.getElementById('msg-btn').style.display = "block";
             var content = quill.root.innerHTML;
             saveDocument(content);
         });
 
         function saveDocument(content) {
-            fetch('/save/{{pid}}', {
+            fetch('/save/{{ pid }}', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
