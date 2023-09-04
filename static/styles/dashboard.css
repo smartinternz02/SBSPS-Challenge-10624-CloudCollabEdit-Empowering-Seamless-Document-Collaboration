@@ -1,0 +1,244 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    height: 60px;
+}
+.logos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 30px;
+}
+.logos h3{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.menus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    margin: 0px 30px;
+}
+.menus a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin: 0px 10px;
+}
+.menus a:hover{
+    border-bottom: 1px solid white;
+}
+.menus p{
+    color: white;
+}
+
+.content{
+    display: flex;
+    height: 90.5vh;
+    margin: 2px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: black;
+}
+.sidebar{
+    background-color: black;
+    width: 15%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.top-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-title h2{
+    color: white;
+    padding: 30px 0px 15px 0px;
+}
+.top-menu{
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.top-menu a{
+    color: white;
+    margin: 5px 0px;
+    text-decoration: none;
+}
+.top-menu a:hover{
+    border-bottom: 1px solid white;
+}
+.bottom{
+    margin: 40px 0px;
+}
+.bottom a{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.bottom a:hover{
+    border-bottom: 1px solid white;
+}
+.main-ctn{
+    background-color: white;
+    width: 85%;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-start;
+}
+.left{
+    width: auto;
+    margin: 0px 2px;
+    height: 84.5vh;
+    padding: 20px 40px;
+    background-color: white;
+    border-radius: 10px;
+}
+.left-top{
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+}
+.left-top h3{
+    font-size: 25px;
+    color: white;
+}
+.boxes{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0px;
+    gap: 20px;
+}
+.file-count{
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+.file-count h2{
+    color: black;
+}
+.project-count{
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+.project-count h2{
+    color: black;
+}
+.left-bottom{
+    padding: 20px;
+}
+.left-bottom table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.left-bottom table h1{
+    font-size: 30px;
+    color: black;
+    font-weight: 500;
+}
+.left-bottom table th{
+    background-color: black;
+    color: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+.left-bottom table th a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+.left-bottom table tr td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;   
+}
+.left-bottom table tr td a{
+    text-decoration: none;
+    color: black;
+}
+.left-bottom table tr td a:hover{
+    border-bottom: 1px solid black;
+}
+.left-bottom h3{
+    font-size: 30px;
+    color: black;
+}
+.right{
+    width: auto;
+    margin: 0px 2px;
+    height: 84.5vh;
+    padding: 20px 40px;
+    background-color: white;
+    border-radius: 10px;
+}
+.right table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.right table h1{
+    font-size: 30px;
+    color: black;
+    font-weight: 500;
+}
+.right table th{
+    background-color: black;
+    color: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 200px;
+    text-align: left;
+}
+.right table th a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+.right table tr td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;   
+}
+.right table tr td a{
+    text-decoration: none;
+    color: black;
+}
+.right table tr td a:hover{
+    border-bottom: 1px solid black;
+}
+.right h3{
+    font-size: 30px;
+    color: black;
+}

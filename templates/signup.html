@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %} SignUp {% endblock %}
+{% block styles %} <link rel="stylesheet" href="../static/styles/signup.css"> {% endblock %}
+
+{% block content %}
+    <div class="login-box">
+        <div class="left">
+            <h2>CloudCollab</h2>
+        </div>
+        <div class="right">
+            <h3>Signup</h3>
+            <div class="error"><p>{{ error_message }}</p></div>
+            <div class="success"><p>{{ success_message }}</p></div>
+            <form action="" method="post">
+                <input type="text" name="fname" placeholder="Full Name:">
+                <input type="text" name="email" placeholder="Email Address:">
+                <input type="password" name="pword" placeholder="Password:">
+                <input type="password" name="cpword" placeholder="Confirm Password:">
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="alt-btn">
+                <p>Already had one?</p>
+                <a href="/login">Login to your account.</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

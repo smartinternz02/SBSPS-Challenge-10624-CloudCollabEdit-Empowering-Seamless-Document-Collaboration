@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %} Base {% endblock %}</title>
+        {% block styles %}<link rel="stylesheet" href="../static/styles/base.css">{% endblock %}
+        {% block scripts %} {% endblock %}
+    </head>
+    <body>
+        <div class="nav">
+            <div class="logos">
+                <h3>CloudCollab</h3>
+            </div>
+            <div class="menus">
+                <a href="/">Home</a>
+                <a href="/feature">Features</a>
+                <a href="/about">About</a>
+                <a href="/faq">FAQs</a>
+                <p>|</p>
+                {% if session['authorized'] %}
+                <a href="/dashboard">{{ session['fname'] }}</a>
+                {% else %}
+                <a href="/login">Login</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="content">
+            {% block content %}
+                <h1>Base Page</h1>
+            {% endblock %}
+        </div>
+    </body>
+</html>

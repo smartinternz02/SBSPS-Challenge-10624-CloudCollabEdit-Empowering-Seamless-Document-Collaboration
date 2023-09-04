@@ -1,0 +1,56 @@
+{% extends "base2.html" %}
+{% block title %} Dashboard {% endblock %}
+{% block styles %} <link rel="stylesheet" href="../static/styles/file_info.css"> {% endblock %}
+
+{% block main_ctn %}
+    <div class="top-ctn">
+        <h2>{{ curr_proj['PROJECT_NAME'] }}</h2>
+        <h4>></h4>
+        <h3>{{ curr_doc['DOC_NAME'] }}</h3>
+    </div>
+    <div class="bottom-ctn">
+        <div class="bottom-left">
+            <h2>File information</h2>
+            <div class="info">
+                <div class="detail">
+                    <h3>Document Name:</h3>
+                    <h4>{{curr_doc['DOC_NAME']}}</h4>
+                </div>
+                <div class="detail">
+                    <h3>Document Type:</h3>
+                    <h4>{{curr_doc['DOC_TYPE']}}</h4>
+                </div>
+                <div class="detail">
+                    <h3>Document Size:</h3>
+                    <h4>{{curr_doc['DOC_SIZE']}}</h4>
+                </div>
+                <div class="detail">
+                    <h3>Document Created on:</h3>
+                    <h4>{{curr_doc['DOC_CREATED_DATE']}}</h4>
+                </div>
+                <div class="detail">
+                    <h3>Document Modified on:</h3>
+                    <h4>{{curr_doc['DOC_MODIFIED_DATE']}}</h4>
+                </div>
+                <div class="detail">
+                    <h3>Document Owner:</h3>
+                    <h4>{{curr_doc['DOC_UNAME']}}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-right">
+            <table>
+                <h1>Version History</h1>
+                <tr>
+                    <th><a href="#">Version</a></th>
+                    <th>Modified on</th>
+                </tr>
+                <tr>
+                    <td><a href="#">version1</a></td>
+                    <td>27-08-2023</td>
+                </tr>
+            </table>
+            <a href="" class="edit-btn">Edit Document</a>
+        </div>
+    </div>
+{% endblock %}

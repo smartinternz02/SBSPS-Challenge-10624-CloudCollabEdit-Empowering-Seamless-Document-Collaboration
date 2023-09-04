@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block styles %} <link rel="stylesheet" href="../static/styles/feature.css"> {% endblock %}
+
+{% block content %}
+    <h1>Our Features,</h1>
+    <div class="features">
+        <dif class="box">
+            <h3>Real-time Document editing</h3>
+            <p>Collaboratively modify documents with instant updates visible to all users.</p>
+        </dif>
+        <dif class="box">
+            <h3>Instant access using cloud</h3>
+            <p>Access and edit documents from anywhere through online cloud storage, promoting remote collaboration.</p>
+        </dif>
+        <dif class="box">
+            <h3>Comments</h3>
+            <p>Annotations or notes added to documents to provide context, explanations, or feedback for better understanding and communication.</p>
+        </dif>
+        <dif class="box">
+            <h3>Track changes and version control</h3>
+            <p>Monitor and manage document modifications, preserving previous states for easy review and rollback.</p>
+        </dif>
+    </div>
+{% endblock %}

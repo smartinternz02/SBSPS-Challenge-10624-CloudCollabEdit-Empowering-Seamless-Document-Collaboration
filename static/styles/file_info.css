@@ -1,0 +1,225 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    height: 60px;
+}
+.logos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 30px;
+}
+.logos h3{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.menus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    margin: 0px 30px;
+}
+.menus a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin: 0px 10px;
+}
+.menus a:hover{
+    border-bottom: 1px solid white;
+}
+.menus p{
+    color: white;
+}
+
+.content{
+    display: flex;
+    height: 90.5vh;
+    margin: 2px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: black;
+}
+.sidebar{
+    background-color: black;
+    width: 15%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.top-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-title h2{
+    color: white;
+    padding: 30px 0px 15px 0px;
+}
+.top-menu{
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.top-menu a{
+    color: white;
+    margin: 5px 0px;
+    text-decoration: none;
+}
+.top-menu a:hover{
+    border-bottom: 1px solid white;
+}
+.bottom{
+    margin: 40px 0px;
+}
+.bottom a{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-bottom-right: 10px;
+    text-decoration: none;
+}
+.bottom a:hover{
+    border-bottom: 1px solid white;
+}
+.main-ctn{
+    background-color: white;
+    width: 85%;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.top-ctn{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+.top-ctn h4{
+    margin: 6px 0px 0px 10px;
+}
+.top-ctn h3{
+    margin: 5px 0px 0px 10px;
+}
+.bottom-ctn{
+    margin: 20px 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.bottom-left{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 50%;
+}
+.bottom-left h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+.info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.detail h4{
+    font-size: 15px;
+    margin: 3px 0px 0px 10px;
+    font-weight: 400;
+}
+.bottom-right{
+    width: auto;
+    margin: 0px 2px;
+    height: 60vh;
+    padding: 20px 40px;
+    background-color: white;
+    border-radius: 10px;
+}
+.bottom-right table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.bottom-right table h1{
+    font-size: 30px;
+    color: black;
+    font-weight: 500;
+}
+.bottom-right table th{
+    background-color: black;
+    color: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 200px;
+    text-align: left;
+}
+.bottom-right table th a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+.bottom-right table tr td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;   
+}
+.bottom-right table tr td a{
+    text-decoration: none;
+    color: black;
+}
+.bottom-right table tr td a:hover{
+    border-bottom: 1px solid black;
+}
+.bottom-right h3{
+    font-size: 30px;
+    color: black;
+}
+.edit-btn{
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+}
+.edit-btn:hover{
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,54 @@
+{% extends "base2.html" %}
+{% block title %} Dashboard {% endblock %}
+{% block styles %} 
+    <link rel="stylesheet" href="../static/styles/editor.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">    
+{% endblock %}
+{% block main_ctn %}
+    <div class="options">
+        <div class="op-left">
+            <h2>{{ project_name }}</h2>
+            <h4>></h4>
+            <h3>{{ doc_name }}</h3>
+        </div>
+        <div class="msg">
+            <h3>{{ message }}</h3>
+        </div>
+        <div class="op-right">
+            <p>Last Modified on: {{ last_modified }}</p>
+            <button id="save-btn">Save Document</button>
+        </div>
+    </div>
+    <div class="editor-ui">
+        <div id="editor"></div>
+    </div>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+        var quill = new Quill('#editor', {
+            theme: 'snow'
+        });
+
+        var saveBtn = document.getElementById('save-btn');
+        saveBtn.addEventListener('click', function() {
+            var content = quill.root.innerHTML;
+            saveDocument(content);
+        });
+
+        function saveDocument(content) {
+            fetch('/save/{{pid}}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ content: content })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message);
+            })
+            .catch(error => {
+                console.error('Error saving document:', error);
+            });
+        }
+    </script>
+{% endblock %}

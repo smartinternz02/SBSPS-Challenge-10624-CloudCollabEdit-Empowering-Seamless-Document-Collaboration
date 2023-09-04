@@ -1,0 +1,47 @@
+{% extends "base2.html" %}
+{% block title %} Dashboard {% endblock %}
+{% block styles %} <link rel="stylesheet" href="../static/styles/project.css"> {% endblock %}
+
+{% block main_ctn %}
+    <div class="left">
+        <div class="boxes">
+            <div class="project-create">
+                <p>{{ project_message }}</p>
+                <h2>Create a new Project</h2>
+                <form action="/newproject" method="post">
+                    <input type="text" name="pname" placeholder="Project Name:">
+                    <input type="text" name="pdesc" placeholder="Project Description:">
+                    <button type="submit">Create Project.</button>
+                </form>
+            </div>
+            <div class="doc-create">
+                <p>{{ doc_message }}</p>
+                <h2>Create a new Document</h2>
+                <form action="/newdoc" method="post">
+                    <input type="text" name="pname" placeholder="Project Name:">
+                    <input type="text" name="dname" placeholder="Document Name:">
+                    <button type="submit">Create Document.</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        {% if proj_list %}
+        <table>
+            <h1>My Projects</h1>
+            <tr>
+                <th><a href="#">Name</a></th>
+                <th>Last Modified</th>
+            </tr>
+            {% for curr_proj in proj_list %}
+            <tr>
+                <td><a href="{{url_for('doc',project_id = curr_proj['PROJECT_ID'])}}">{{curr_proj['PROJECT_NAME']}}</a></td>
+                <td>{{curr_proj['PROJECT_LAST_MODIFIED']}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+            <h3>No Projects found.</h3>
+        {% endif %}
+    </div>
+{% endblock %}

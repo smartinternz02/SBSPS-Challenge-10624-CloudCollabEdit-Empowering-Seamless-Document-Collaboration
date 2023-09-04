@@ -1,0 +1,13 @@
+{% extends "base2.html" %}
+{% block title %} Dashboard {% endblock %}
+{% block styles %} <link rel="stylesheet" href="../static/styles/success.css"> {% endblock %}
+
+{% block main_ctn %}
+    <center>
+        <h2>Document Upload Successful.</h2>
+        <div class="buttons">
+            <a href="/download">Download File.</a>
+            <a href="/dashboard">Go to Dashboard.</a>
+        </div>
+    </center>
+{% endblock %}

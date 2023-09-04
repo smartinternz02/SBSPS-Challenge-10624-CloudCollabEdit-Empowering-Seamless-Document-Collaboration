@@ -1,0 +1,46 @@
+{% extends "base2.html" %}
+{% block title %} Dashboard {% endblock %}
+{% block styles %} <link rel="stylesheet" href="../static/styles/docs.css"> {% endblock %}
+
+{% block main_ctn %}
+    <div class="left">
+        {% if proj_list %}
+        <table>
+            <h1>My Projects</h1>
+            <tr>
+                <th><a href="#">Name</a></th>
+                <th>Last Modified</th>
+            </tr>
+            {% for curr_proj in proj_list %}
+            <tr>
+                <td><a href="{{url_for('doc',project_id = curr_proj['PROJECT_ID'])}}">{{curr_proj['PROJECT_NAME']}}</a></td>
+                <td>{{curr_proj['PROJECT_LAST_MODIFIED']}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+            <h3>No Projects found.</h3>
+        {% endif %}
+    </div>
+    <div class="right">
+        {% if doc_list %}
+            <table>
+                <h1>My Documents</h1>
+                <tr>
+                    <th><a href="#">Name</a></th>
+                    <th>Type</th>
+                    <th>Last Modified</th>
+                </tr>
+                {% for curr_doc in doc_list %}
+                <tr>
+                    <td><a href="{{url_for('file_info', doc_id = curr_doc['DOC_ID'])}}">{{curr_doc['DOC_NAME']}}</a></td>
+                    <td>{{curr_doc['DOC_TYPE']}}</td>
+                    <td>{{curr_doc['DOC_MODIFIED_DATE']}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <h3>No documents found.</h3>
+        {% endif %}
+    </div>
+{% endblock %}
